@@ -1,0 +1,251 @@
+/* =========================
+   AETHERPVP GLOBAL STYLE
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #0B1020;
+    color: #F4F7FF;
+    overflow-x: hidden;
+}
+
+/* Background glow */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(91,231,255,0.15), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(138,92,255,0.15), transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(109,255,138,0.08), transparent 40%);
+    z-index: -1;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(11, 16, 32, 0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #5BE7FF;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #C7D2FF;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #5BE7FF;
+}
+
+.discord-btn {
+    padding: 10px 18px;
+    background: #5865F2;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.discord-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.small-title {
+    color: #5BE7FF;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.description {
+    margin-top: 20px;
+    color: #AAB3D6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.play-btn {
+    padding: 12px 24px;
+    border: none;
+    background: linear-gradient(90deg, #5BE7FF, #8A5CFF);
+    color: #0B1020;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.copy-btn {
+    padding: 12px 24px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
+    color: #F4F7FF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* =========================
+   STATS
+   ========================= */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 20px 40px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 180px;
+}
+
+.card h2 {
+    font-size: 28px;
+    color: #5BE7FF;
+}
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.features {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.feature {
+    background: rgba(255,255,255,0.03);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.feature h3 {
+    color: #8A5CFF;
+}
+
+/* =========================
+   JOIN SECTION
+   ========================= */
+
+.join {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.big-play {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #5BE7FF, #8A5CFF);
+    cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #667;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
