@@ -1,13 +1,9 @@
 # AetherPvP Website
 
-This is a frontend experiment for a fictional Minecraft PvP network.
+This is a frontend experiment for a fictional Minecraft PvP network
 
-It was built for learning purposes and is not connected to any real server.
+It was built for learning purposes and is not connected to any real server
 
-## Tech used
-- HTML
-- CSS
-- JavaScript
 
 ## Purpose
 Practicing UI design and basic web development structure.
