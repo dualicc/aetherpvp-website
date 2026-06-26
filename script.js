@@ -63,3 +63,10 @@ revealElements.forEach(el => {
     el.style.transition = "0.6s ease";
     revealObserver.observe(el);
 });
+const playBtn = document.querySelector(".play-btn");
+
+if (playBtn) {
+    playBtn.addEventListener("click", () => {
+        alert("Connect to: play.aetherpvp.net");
+    });
+}
