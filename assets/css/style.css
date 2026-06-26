@@ -289,3 +289,35 @@ button:hover {
 html {
     scroll-behavior: smooth;
 }
+/* --- SIMPLE POLISH UPGRADES --- */
+
+#serverStatus {
+    color: #5BE7FF;
+}
+
+.big-play:hover,
+.play-btn:hover,
+.copy-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    transition: 0.2s;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #5BE7FF;
+    transition: 0.2s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
