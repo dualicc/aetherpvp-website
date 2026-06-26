@@ -1,72 +1,54 @@
-// =========================
-// AETHERPVP - NETWORK MODE
-// =========================
-
-// IP copy system
+// Copy IP
 const copyBtn = document.getElementById("copyIP");
 
-if (copyBtn) {
-    copyBtn.addEventListener("click", () => {
-        const ip = "play.aetherpvp.net";
+copyBtn?.addEventListener("click", () => {
+    navigator.clipboard.writeText("play.aetherpvp.net");
 
-        navigator.clipboard.writeText(ip);
+    copyBtn.innerText = "Copied!";
 
-        copyBtn.innerText = "Copied to clipboard!";
+    setTimeout(() => {
+        copyBtn.innerText = "play.aetherpvp.net";
+    }, 1200);
+});
 
-        setTimeout(() => {
-            copyBtn.innerText = ip;
-        }, 1400);
-    });
-}
-
-// Fake-but-realistic player count system
+// Fake but stable player count
 const playerCount = document.getElementById("playerCount");
 
-let base = 1240;
+let players = 842;
 
 setInterval(() => {
-    const change = Math.floor(Math.random() * 9 - 4);
-    base += change;
+    players += Math.floor(Math.random() * 5 - 2);
 
-    if (base < 980) base = 980;
-    if (base > 1800) base = 1800;
+    if (players < 600) players = 600;
+    if (players > 1400) players = 1400;
 
     if (playerCount) {
-        playerCount.innerText = base.toLocaleString();
+        playerCount.innerText = players;
     }
 }, 2500);
 
-// Smooth scroll behavior (future-proof nav)
-document.querySelectorAll("nav a").forEach(a => {
-    a.addEventListener("click", (e) => {
-        e.preventDefault();
-    });
-});
+// Simple server status simulation
+const statusText = document.getElementById("statusText");
+const serverStatus = document.getElementById("serverStatus");
 
-// Scroll reveal animation system
-const revealElements = document.querySelectorAll(".feature, .card, .hero-content");
+function updateStatus() {
+    const online = Math.random() > 0.2;
 
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, {
-    threshold: 0.1
-});
-
-revealElements.forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(20px)";
-    el.style.transition = "0.6s ease";
-    revealObserver.observe(el);
-});
-const playBtn = document.querySelector(".play-btn");
-
-if (playBtn) {
-    playBtn.addEventListener("click", () => {
-        alert("Connect to: play.aetherpvp.net");
-    });
+    if (online) {
+        statusText.innerText = "ONLINE";
+        serverStatus.innerText = "Online";
+        statusText.style.color = "#6DFF8A";
+    } else {
+        statusText.innerText = "OFFLINE";
+        serverStatus.innerText = "Offline";
+        statusText.style.color = "#FF6D6D";
+    }
 }
+
+updateStatus();
+setInterval(updateStatus, 8000);
+
+// Play button
+document.querySelector(".big-play")?.addEventListener("click", () => {
+    alert("Server IP: play.aetherpvp.net");
+});
