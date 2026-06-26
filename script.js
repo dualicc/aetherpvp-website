@@ -1,15 +1,24 @@
 // Copy IP
 const copyBtn = document.getElementById("copyIP");
 
-copyBtn?.addEventListener("click", () => {
-    navigator.clipboard.writeText("play.aetherpvp.net");
+if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+        const ip = "play.aetherpvp.net";
 
-    copyBtn.innerText = "Copied!";
+        try {
+            await navigator.clipboard.writeText(ip);
 
-    setTimeout(() => {
-        copyBtn.innerText = "play.aetherpvp.net";
-    }, 1200);
-});
+            copyBtn.innerText = "Copied!";
+
+            setTimeout(() => {
+                copyBtn.innerText = ip;
+            }, 1200);
+
+        } catch (err) {
+            alert("Could not copy IP. Manual IP: " + ip);
+        }
+    });
+}
 
 // Fake but stable player count
 const playerCount = document.getElementById("playerCount");
