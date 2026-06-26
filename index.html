@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AetherPvP | Competitive 1.8.9 PvP</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>AetherPvP | 1.8.9 PvP Network</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="theme-color" content="#0B1020">
 </head>
 
 <body>
@@ -19,56 +17,38 @@
 <div class="background"></div>
 
 <header>
+    <div class="logo">Aether<span>PvP</span></div>
 
-    <div class="logo">
-        Aether<span>PvP</span>
-    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#stats">Stats</a>
+        <a href="#join">Play</a>
+    </nav>
 
-   <nav>
-    <a href="#home">Home</a>
-    <a href="#features">Features</a>
-    <a href="#stats">Stats</a>
-    <a href="#join">Play</a>
-</nav>
-
-    <a href="#" class="discord-btn">
-        Discord
-    </a>
-
+    <a href="#" class="discord-btn">Discord</a>
 </header>
 
 <section class="hero" id="home">
 
     <div class="hero-content">
 
-        <p class="small-title">
-            COMPETITIVE • 1.8.9 • DUELS
-        </p>
+        <p class="small-title">1.8.9 • COMPETITIVE PvP</p>
 
-        <h1>
-            Skill Defines<br>Victory.
-        </h1>
+        <h1>Skill Defines<br>Victory.</h1>
 
         <p class="description">
-
-            Experience the next generation of Minecraft PvP.
-
-            Fight against players worldwide in Practice,
-            Ranked, UHC, Events, and Clan Battles.
-
+            A clean PvP experience focused on fair fights, smooth gameplay, and competitive modes.
         </p>
 
         <div class="buttons">
-
-            <button class="play-btn">
-                Play Now
-            </button>
-
-            <button class="copy-btn" id="copyIP">
-                play.aetherpvp.net
-            </button>
-
+            <button class="play-btn">Play Now</button>
+            <button class="copy-btn" id="copyIP">play.aetherpvp.net</button>
         </div>
+
+        <p style="margin-top:15px;color:#7f8bb3;font-size:12px;">
+            Status: <span id="serverStatus">Checking...</span>
+        </p>
 
     </div>
 
@@ -77,105 +57,46 @@
 <section class="stats" id="stats">
 
     <div class="card">
-
-        <h2 id="playerCount">
-            1,284
-        </h2>
-
-        <p>
-            Players Online
-        </p>
-
+        <h2 id="playerCount">--</h2>
+        <p>Players Online</p>
     </div>
 
     <div class="card">
-
-        <h2>
-            ONLINE
-        </h2>
-
-        <p>
-            Server Status
-        </p>
-
+        <h2 id="statusText">UNKNOWN</h2>
+        <p>Server Status</p>
     </div>
 
     <div class="card">
-
-        <h2>
-            Season I
-        </h2>
-
-        <p>
-            Current Season
-        </p>
-
+        <h2>1.8.9</h2>
+        <p>Version</p>
     </div>
 
 </section>
 
 <section class="features" id="features">
 
-    <h2>
-        Why AetherPvP?
-    </h2>
+    <h2>Features</h2>
 
     <div class="feature-grid">
 
         <div class="feature">
-
-            <h3>
-                Ranked PvP
-            </h3>
-
-            <p>
-
-                Face skilled opponents and climb the competitive ladder.
-
-            </p>
-
+            <h3>Practice</h3>
+            <p>Improve mechanics in fast PvP duels.</p>
         </div>
 
         <div class="feature">
-
-            <h3>
-                Instant Matches
-            </h3>
-
-            <p>
-
-                Get into games within seconds using our optimized matchmaking.
-
-            </p>
-
+            <h3>Ranked</h3>
+            <p>Compete against players of equal skill.</p>
         </div>
 
         <div class="feature">
-
-            <h3>
-                Fair Gameplay
-            </h3>
-
-            <p>
-
-                Balanced kits, modern anti-cheat, and smooth combat.
-
-            </p>
-
+            <h3>Events</h3>
+            <p>Weekly tournaments and special gamemodes.</p>
         </div>
 
         <div class="feature">
-
-            <h3>
-                Clan Battles
-            </h3>
-
-            <p>
-
-                Team up with friends and dominate weekly tournaments.
-
-            </p>
-
+            <h3>Clans</h3>
+            <p>Team up and dominate the ladder.</p>
         </div>
 
     </div>
@@ -184,40 +105,16 @@
 
 <section class="join" id="join">
 
-    <h2>
+    <h2>Join the Fight</h2>
+    <p>Connect and start playing instantly.</p>
 
-        Ready to prove yourself?
-
-    </h2>
-
-    <p>
-
-        Join thousands of players battling every day.
-
-    </p>
-
-    <button class="big-play">
-
-        Connect Now
-
-    </button>
+    <button class="big-play">Connect Now</button>
 
 </section>
 
 <footer>
-
-    <div>
-
-        © 2026 AetherPvP
-
-    </div>
-
-    <div>
-
-        Designed for Minecraft 1.8.9
-
-    </div>
-
+    <div>© 2026 AetherPvP</div>
+    <div>1.8.9 PvP Network Project</div>
 </footer>
 
 <script src="assets/js/script.js"></script>
